@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="CryptoAbi helps you with all your crypto
+    solutions. Check the current course and price of your favorite crypto coin.
+    Chat with people about the coins."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="manifest" href="/manifest.json" />
+    <script
+      src="https://kit.fontawesome.com/e367b28ca4.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>CryptoAbi</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <header>
+        <h1><a href="/" title="homeName">CryptoAbi</a></h1>
+
+        <button id="zoekenKnop" name="zoekenKnop">
+          <i class="fa-solid fa-magnifying-glass"></i> Search
+        </button>
+      </header>
+
+      <div class="zoekbalk">
+        <button id="zoekenSluiten" title="zoekSluiten">X</button>
+        <h2>Search</h2>
+        <input id="zoekVeld" />
+        <button id="extraZoeken">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+
+      <button id="resultatenResetten">
+        <i class="fa-solid fa-filter-circle-xmark"></i>
+      </button>
+
+      <main>
+        <div class="cryptoInfo"><%- body %></div>
+      </main>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
+      integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

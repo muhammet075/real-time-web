@@ -1,0 +1,65 @@
+
+<div class="cryptocoins">
+  
+  <% for (let i = 0; i < array.length; i++) {%>
+ <div class="cryptoContainer <%= array[i].name %>"
+  <div class="cryptoGegevens <%= array[i].name %> tabindex="4">
+  <div class="coin">
+    <ul class="coinul">
+      <li>
+        <img
+          src="<%= array[i].image %>"
+          alt="<%= array[i].name %>"
+          height="50px"
+        />
+      </li>
+      <li><%= array[i].symbol %></li>
+      <li><h3 class="cryptoNaam"><%= array[i].name %></h3></li>
+      <li>Price</li>
+            <li>&#8364  <%= array[i].current_price %></li>
+            <li>Market cap</li>
+            <li>&#8364  <%= array[i].market_cap %></li>
+            <li>Change</li>
+            <li class="percentageVerandering"> <%= array[i].price_change_percentage_24h %></li>
+            <li>Last update</li>
+            <li><%= array[i].last_updated %></li>
+            <li class="sluiten"><i class="fa-solid fa-xmark"></i></li>
+    </ul>
+
+    <button class="joinchat"><span><i class="fa-solid fa-arrow-right-to-bracket"></i></span> Join chat</button>
+
+    <form action="chat">
+      <div>
+        <h3><%= array[i].name %></h3>
+      <button class="closeform">X</button>
+      <label for="username">Name</label>
+      <input
+        type="text"
+        name="username"
+        class="username"
+        placeholder="Enter name..."
+        required
+      />
+
+      <input
+        class="room"
+        value="<%= array[i].name %>"
+        class="room"
+        name="room"
+      />
+
+      <button
+        type="submit"
+        class="btn"
+        class="joinchat"
+        class="room"
+        value="<%= array[i].name %>"
+      >
+        Join
+      </button>
+      </div>
+    </form>
+  </div>
+  </div>
+  <%}%>
+</div>

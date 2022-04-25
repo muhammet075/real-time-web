@@ -1,0 +1,431 @@
+@font-face {
+  font-family: Kanit;
+  src: url("kanit.woff") format("truetype");
+  font-display: swap;
+}
+
+* {
+  margin: 0 auto;
+  padding: 0;
+  font-family: Kanit, Arial, Helvetica, sans-serif;
+  font-weight: 100;
+}
+
+body {
+  background: #e1e1e1;
+}
+
+#app {
+  max-width: 430px;
+  height: auto;
+  background: #fff;
+  position: relative;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #7158e2;
+  color: #ffff;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#zoekenKnop {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+.zoekbalk {
+  display: none;
+  text-align: center;
+  background-color: #7158e2;
+  color: #ffff;
+}
+
+.zoekbalk h2 {
+  margin: 0;
+}
+
+.zoekbalk::before {
+  content: "";
+  width: 150px;
+  height: 80px;
+  display: block;
+  position: absolute;
+  background-color: #7158e2;
+  right: 0;
+  top: 0px;
+}
+
+.zoekbalkAnimatie {
+  animation: zoekbalkAnimatie 0.2s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  display: block;
+  height: 0px;
+}
+
+.zoekbalkAnimatieSluiten {
+  animation: zoekbalkAnimatieSluiten 0.2s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  display: block;
+  height: 0px;
+}
+
+#zoekenSluiten {
+  position: absolute;
+  right: 60px;
+  top: 15px;
+  background: none;
+  border: none;
+  color: #ffff;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+#zoekVeld {
+  font-size: 1.45em;
+}
+
+#extraZoeken {
+  margin-left: -10px;
+  font-size: 1.5em;
+  background-color: #4c3c9b;
+  border: 1px solid #767676;
+  color: #ffff;
+  width: 60px;
+  cursor: pointer;
+}
+
+@keyframes zoekbalkAnimatie {
+  0% {
+    height: 0px;
+    display: block;
+  }
+
+  100% {
+    height: 100px;
+  }
+}
+
+@keyframes zoekbalkAnimatieSluiten {
+  0% {
+    height: 100px;
+  }
+
+  100% {
+    height: 0px;
+    display: none;
+  }
+}
+
+.aboutPage {
+  display: none;
+  width: 430px;
+  height: 100%;
+  position: fixed;
+  overflow-y: scroll;
+  background-color: #ffff;
+  top: 0;
+  z-index: 999999;
+}
+
+.aboutPage h2,
+.aboutPage h3 {
+  font-size: 2em;
+  color: #7158e2;
+  margin: 0 0 10px 0px;
+}
+
+.aboutPage img {
+  width: auto;
+  height: 200px;
+  margin: 20px 0;
+}
+
+.aboutPage article {
+  margin-top: 30px;
+}
+
+#sluitAbout {
+  position: absolute;
+  right: 35px;
+  top: 0px;
+  font-size: 3em;
+  background: none;
+  border: none;
+  color: #7158e2;
+  cursor: pointer;
+}
+
+.aboutOpenanimatie {
+  animation: aboutOpenanimatie 0.5s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  display: block;
+}
+
+.aboutsluitenAnimatie {
+  animation: aboutsluitenAnimatie 0.5s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  display: block;
+}
+
+@keyframes aboutOpenanimatie {
+  0% {
+    right: -1000px;
+    display: block;
+  }
+
+  100% {
+    right: 0px;
+    left: 0px;
+  }
+}
+
+@keyframes aboutsluitenAnimatie {
+  0% {
+    right: 0px;
+    left: 0px;
+  }
+
+  100% {
+    right: -1000px;
+  }
+}
+
+.cryptoInfo {
+  position: relative;
+}
+
+.cryptocoins {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-around;
+}
+
+#resultatenResetten {
+  display: none;
+}
+
+.coin {
+  list-style: none;
+  width: 145px;
+  border: 1px solid #eaeaea9c;
+  border-radius: 3px;
+  box-shadow: 4px 6px 2px 2px rgb(112 112 112 / 15%);
+  padding: 20px 15px 50px 15px;
+  margin: 30px 0px;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+}
+
+.coin ul {
+  list-style: none;
+  padding: 0;
+}
+
+.coin ul li:nth-child(2) {
+  font-size: 0.8em;
+  background-color: #f4f4f4;
+  color: #7158e2;
+  width: 100px;
+  text-align: center;
+  border-radius: 20px;
+  margin: 10px auto;
+}
+
+.joinchat {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #7158e2;
+  border: none;
+  padding: 5px 0;
+  color: #fff;
+  cursor: pointer;
+}
+.joinchat span {
+  margin-right: 2px;
+}
+
+.room {
+  display: none;
+}
+
+.coin form {
+  display: none;
+}
+
+.coin ul li:nth-child(4),
+.coin ul li:nth-child(5),
+.coin ul li:nth-child(6),
+.coin ul li:nth-child(7),
+.coin ul li:nth-child(8),
+.coin ul li:nth-child(9),
+.coin ul li:nth-child(10),
+.coin ul li:nth-child(11),
+.sluiten {
+  display: none;
+}
+
+.coinulpage {
+  width: 430px;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 99999;
+}
+
+.coinulpage li:nth-child(4),
+.coinulpage li:nth-child(5),
+.coinulpage li:nth-child(6),
+.coinulpage li:nth-child(7),
+.coinulpage li:nth-child(8),
+.coinulpage li:nth-child(9),
+.coinulpage li:nth-child(10),
+.coinulpage li:nth-child(11) {
+  display: block !important;
+}
+
+.cryptopagina form {
+  display: block;
+  position: fixed;
+  z-index: 999999;
+  background-color: #000000a6;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.cryptopagina form div {
+  margin-top: 150px;
+  background-color: white;
+  width: 350px;
+  position: relative;
+}
+
+.btn {
+  display: block;
+  background: #7158e2;
+  border: none;
+  color: #fff;
+  padding: 5px;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.cryptopagina form div h3 {
+  margin-bottom: 60px;
+  font-size: 1.7em;
+}
+
+.closeform {
+  position: absolute;
+  width: 50px !important;
+  border: none;
+  top: 0px;
+  right: 0px;
+  font-size: 2em;
+  color: #7158e2;
+  background: none;
+  padding: 0px;
+  cursor: pointer;
+}
+
+.message {
+  background: #7158e229;
+  width: 80%;
+  padding: 10px 25px;
+  border-radius: 10px;
+  position: relative;
+  margin: 20px auto;
+}
+
+.message .meta {
+  margin-bottom: 10px;
+  color: #7158e2;
+}
+
+.message .meta span {
+  color: #6b6b6b;
+  margin-left: 20px;
+  font-size: 13px;
+  position: absolute;
+  right: 30px;
+}
+
+.leavechat {
+  display: block;
+  position: absolute;
+  right: 30px;
+  top: -80px;
+  padding: 7px;
+  margin: 0;
+  width: 130px;
+  text-align: center;
+  background: white;
+}
+
+#chat-form {
+  position: relative;
+}
+
+#chat-form #msg {
+  width: 350px;
+  height: 50px;
+  padding-left: 10px;
+}
+
+.sendbtn {
+  position: absolute;
+  display: block;
+  margin: 0;
+  top: 0;
+  right: 0;
+  width: 70px;
+  height: 100%;
+}
+
+.chatpage h2 {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.chatpage #userlist {
+  padding: 5px;
+}
+.chatpage #userlist h3 {
+  margin-left: 8px;
+}
+
+.chatpage #userlist #users {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  justify-content: space-around;
+  font-size: 0.6em;
+  list-style: none;
+}
