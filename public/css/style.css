@@ -1,5 +1,6 @@
 @font-face {
   font-family: Kanit;
+  font-style: normal;
   src: url("kanit.woff") format("truetype");
   font-display: swap;
 }
@@ -31,6 +32,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 header a {
@@ -38,12 +40,27 @@ header a {
   text-decoration: none;
 }
 
+header img {
+  position: absolute;
+  bottom: -30px;
+}
+
+#chats {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+  margin: 0 30px;
+}
+
 #zoekenKnop {
   background: none;
   border: none;
   color: #fff;
-  font-size: 1.3em;
+  font-size: 1em;
   cursor: pointer;
+  margin: 0 5px;
 }
 
 .zoekbalk {
@@ -54,12 +71,14 @@ header a {
 }
 
 .zoekbalk h2 {
+  padding-top: 60px;
   margin: 0;
+  margin-bottom: 10px;
 }
 
 .zoekbalk::before {
   content: "";
-  width: 150px;
+  width: 200px;
   height: 80px;
   display: block;
   position: absolute;
@@ -69,7 +88,7 @@ header a {
 }
 
 .zoekbalkAnimatie {
-  animation: zoekbalkAnimatie 0.2s;
+  animation: zoekbalkAnimatie 0.3s;
   animation-delay: 0s;
   animation-fill-mode: forwards;
   display: block;
@@ -77,7 +96,7 @@ header a {
 }
 
 .zoekbalkAnimatieSluiten {
-  animation: zoekbalkAnimatieSluiten 0.2s;
+  animation: zoekbalkAnimatieSluiten 0.3s;
   animation-delay: 0s;
   animation-fill-mode: forwards;
   display: block;
@@ -116,13 +135,13 @@ header a {
   }
 
   100% {
-    height: 100px;
+    height: 200px;
   }
 }
 
 @keyframes zoekbalkAnimatieSluiten {
   0% {
-    height: 100px;
+    height: 200px;
   }
 
   100% {
@@ -215,20 +234,30 @@ header a {
   display: grid;
   grid-template-columns: auto auto;
   justify-content: space-around;
+  margin-top: 60px;
 }
 
 #resultatenResetten {
   display: none;
+  position: absolute;
+  right: 10px;
+  font-size: 2em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #7158e2;
+  margin-top: 10px;
+  z-index: 9999;
 }
 
 .coin {
   list-style: none;
-  width: 145px;
-  border: 1px solid #eaeaea9c;
-  border-radius: 3px;
-  box-shadow: 4px 6px 2px 2px rgb(112 112 112 / 15%);
-  padding: 20px 15px 50px 15px;
-  margin: 30px 0px;
+  width: 140px;
+  border: 1px solid #eaeaea5c;
+  border-radius: 5px;
+  box-shadow: 0px 6px 24px rgb(157 157 157 / 15%);
+  padding: 20px 15px 30px 15px;
+  margin: 20px 0px;
   cursor: pointer;
   text-align: center;
   position: relative;
@@ -249,27 +278,70 @@ header a {
   margin: 10px auto;
 }
 
-.joinchat {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #7158e2;
-  border: none;
-  padding: 5px 0;
-  color: #fff;
-  cursor: pointer;
-}
-.joinchat span {
-  margin-right: 2px;
+.cryptoNaam {
+  font-size: 1em;
+  font-weight: 600;
 }
 
-.room {
+.chatcrypto {
+  position: relative;
+  display: flex;
+  margin: 0px auto;
+  margin-bottom: 30px;
+  align-items: end;
+  list-style: none;
+  border-bottom: 1px solid #e2e2e2;
+  padding: 20px 0;
+  width: 90%;
+}
+
+.chatscontainer {
+  margin-top: 60px;
+}
+
+.chatscontainer::before {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 50px;
+  background: #7158e2;
+  position: absolute;
+  top: -125px;
+  right: 0px;
+}
+
+.chatcrypto li:nth-child(1) {
+  margin: 0 40px 0 40px;
+}
+
+.chatcrypto li:nth-child(2) {
+  width: 100%;
+}
+
+.chatcrypto form {
   display: none;
 }
 
-.coin form {
+.chatcrypto .joinchat {
+  background: #7158e2;
+  border: none;
+  color: #fff;
+  padding: 5px 40px;
+  border-radius: 3px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.goback {
+  position: absolute;
+  top: -122px;
+  right: 45px;
+  font-size: 2em;
+  text-decoration: none;
+  color: #fff;
+}
+.room {
   display: none;
 }
 
@@ -309,6 +381,64 @@ header a {
   display: block !important;
 }
 
+.coinulpage li:nth-child(4),
+.coinulpage li:nth-child(5),
+.coinulpage li:nth-child(6),
+.coinulpage li:nth-child(7),
+.coinulpage li:nth-child(8),
+.coinulpage li:nth-child(9),
+.coinulpage li:nth-child(10),
+.coinulpage li:nth-child(11) {
+  background: #f4f4f4;
+  width: 90%;
+}
+
+.coinulpage li:nth-child(1) {
+  margin-top: 50px;
+}
+
+.coinulpage li:nth-child(1) img {
+  width: 100px;
+  height: auto;
+}
+
+.coinulpage li:nth-child(3) {
+  margin: 20px auto;
+  font-size: 2em;
+}
+
+.coinulpage li:nth-child(4) {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-weight: bold;
+}
+.coinulpage li:nth-child(6),
+.coinulpage li:nth-child(8),
+.coinulpage li:nth-child(10) {
+  font-weight: bold;
+}
+
+.coinulpage li:nth-child(5),
+.coinulpage li:nth-child(7),
+.coinulpage li:nth-child(9) {
+  padding-bottom: 20px;
+}
+
+.coinulpage li:nth-child(11) {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-bottom: 20px;
+}
+
+.coinulpage .sluiten {
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  font-size: 3em;
+  color: #7158e2;
+}
+
 .cryptopagina form {
   display: block;
   position: fixed;
@@ -325,22 +455,38 @@ header a {
   margin-top: 150px;
   background-color: white;
   width: 350px;
+  height: 260px;
   position: relative;
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
+.cryptopagina form div input {
+  padding: 5px;
+  margin-top: 10px;
+}
 .btn {
   display: block;
   background: #7158e2;
   border: none;
   color: #fff;
   padding: 5px;
-  width: 100%;
-  margin-top: 50px;
+  width: 90%;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .cryptopagina form div h3 {
-  margin-bottom: 60px;
   font-size: 1.7em;
+  margin-top: -100px;
 }
 
 .closeform {
@@ -382,12 +528,13 @@ header a {
   display: block;
   position: absolute;
   right: 30px;
-  top: -80px;
+  top: -110px;
   padding: 7px;
   margin: 0;
-  width: 130px;
+  width: 160px;
   text-align: center;
-  background: white;
+  background: #7158e2;
+  color: #fff;
 }
 
 #chat-form {
@@ -408,6 +555,14 @@ header a {
   right: 0;
   width: 70px;
   height: 100%;
+  background: #7158e2;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.chatpage {
+  margin-top: 50px;
 }
 
 .chatpage h2 {

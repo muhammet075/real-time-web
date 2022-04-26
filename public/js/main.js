@@ -1,17 +1,12 @@
-const chatForm = document.getElementById("chat-form");
-const chatMessages = document.querySelector(".chat-messages");
-const roomName = document.getElementById("room-name");
-const userList = document.getElementById("users");
-
 let cryptoToggle = document.querySelectorAll(".joinchat");
 
-for (let i = 0; i < cryptoToggle.length; i++) {
-  cryptoToggle[i].addEventListener("click", voegClasstoe);
-
+cryptoToggle.forEach((li) => {
+  li.addEventListener("click", voegClasstoe);
   function voegClasstoe() {
-    cryptoToggle[i].parentElement.classList.toggle("cryptopagina");
+    console.log(li);
+    li.parentElement.classList.toggle("cryptopagina");
   }
-}
+});
 
 let closeform = document.querySelectorAll(".closeform");
 
@@ -27,12 +22,19 @@ for (let i = 0; i < closeform.length; i++) {
 
 let coinul = document.querySelectorAll(".coinul");
 
-for (let i = 0; i < coinul.length; i++) {
-  coinul[i].addEventListener("click", toonpagina);
+coinul.forEach((li) => {
+  li.addEventListener("click", toonpagina);
   function toonpagina() {
-    coinul[i].classList.toggle("coinulpage");
+    console.log(li);
+    li.classList.toggle("coinulpage");
   }
-}
+});
+
+const chatForm = document.getElementById("chat-form");
+const chatMessages = document.querySelector(".chat-messages");
+const roomName = document.getElementById("room-name");
+const userList = document.getElementById("users");
+
 document.querySelector("#zoekenKnop").addEventListener("click", toonZoekbalk);
 document
   .querySelector("#zoekenSluiten")

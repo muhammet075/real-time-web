@@ -26,39 +26,8 @@
             <li class="sluiten"><i class="fa-solid fa-xmark"></i></li>
     </ul>
 
-    <button class="joinchat"><span><i class="fa-solid fa-arrow-right-to-bracket"></i></span> Join chat</button>
 
-    <form action="chat">
-      <div>
-        <h3><%= array[i].name %></h3>
-      <button class="closeform">X</button>
-      <label for="username">Name</label>
-      <input
-        type="text"
-        name="username"
-        class="username"
-        placeholder="Enter name..."
-        required
-      />
 
-      <input
-        class="room"
-        value="<%= array[i].name %>"
-        class="room"
-        name="room"
-      />
-
-      <button
-        type="submit"
-        class="btn"
-        class="joinchat"
-        class="room"
-        value="<%= array[i].name %>"
-      >
-        Join
-      </button>
-      </div>
-    </form>
   </div>
   </div>
   <%}%>

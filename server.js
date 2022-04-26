@@ -31,7 +31,13 @@ app.use(expressLayouts);
 app.set("layout", "./layouts/mobiel-formaat");
 app.set("view engine", "ejs");
 
-const botName = "ChatCord Bot";
+//local storage
+if (typeof localStorage === "undefined" || localStorage === null) {
+  var LocalStorage = require("node-localstorage").LocalStorage;
+  localStorage = new LocalStorage("./scratch");
+}
+
+const botName = "CryptoAbi Bot";
 
 // Run when client connects
 io.on("connection", (socket) => {
@@ -90,7 +96,7 @@ app.get("/", handleApi, (req, res) => {
 
 async function handleApi(req, res) {
   const cryptoApi = await fetch(
-    "https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&order=market_cap_desc&per_page=200&page=1&sparkline=false"
+    "https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&order=market_cap_desc&per_page=30&page=1&sparkline=false"
   )
     .then((res) => res.json())
     .then((json) => {
@@ -102,6 +108,9 @@ async function handleApi(req, res) {
       for (let i = 0; i < array.length; i++) {
         console.log(array[i].name);
       }
+
+      const jsonArr = JSON.stringify(array);
+      localStorage.setItem("data", jsonArr);
 
       res.render("index", {
         array: array,
@@ -115,11 +124,18 @@ async function handleApi(req, res) {
     });
 }
 
+app.get("/chatrooms", (req, res) => {
+  let item = JSON.parse(localStorage.getItem("data"));
+  res.render("chatrooms", {
+    item: item,
+  });
+});
+
 //aanmelden route
 app.get("/chat", (req, res) => {
   res.render("chat");
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 7000;
 
 server.listen(PORT, () => console.log(`Server running on port ${PORT}`));

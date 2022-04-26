@@ -1,0 +1,17 @@
+{
+  "name": "CryptoAbi",
+  "short_name": "CryptoAbi",
+  "description": "CryptoAbi helps you with all your crypto solutions. Check the current course and price of your favorite crypto coin. Add one of them on to your favorites.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffff",
+  "theme_color": "#7158e2",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "img/bitcoin.png",
+      "type": "img/png",
+      "sizes": "72x72"
+    }
+  ]
+}

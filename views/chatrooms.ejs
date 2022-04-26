@@ -1,0 +1,47 @@
+<div class="chatscontainer">
+  <a href="/" class="goback"><i class="fa-solid fa-angle-left"></i></a>
+  <% for (let i = 0; i < item.length; i++) {%>
+  <ul class="chatcrypto">
+    <li><img src="<%= item[i].image %>" width="50px" /></li>
+    <li>
+      <h3><%= item[i].name %> chat room</h3>
+      <button class="joinchat">
+        <span><i class="fa-solid fa-arrow-right-to-bracket"></i></span> Join
+        chat room
+      </button>
+
+      <form action="chat">
+        <div>
+          <h3><%= item[i].name %></h3>
+          <button class="closeform">X</button>
+          <label for="username">Name</label>
+          <input
+            type="text"
+            name="username"
+            class="username"
+            placeholder="Enter name..."
+            required
+          />
+
+          <input
+            class="room"
+            value="<%= item[i].name %>"
+            class="room"
+            name="room"
+          />
+
+          <button
+            type="submit"
+            class="btn"
+            class="joinchat"
+            class="room"
+            value="<%= item[i].name %>"
+          >
+            Join
+          </button>
+        </div>
+      </form>
+    </li>
+  </ul>
+  <%}%>
+</div>
