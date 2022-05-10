@@ -39,17 +39,17 @@ if (typeof localStorage === "undefined" || localStorage === null) {
 
 const botName = "CryptoAbi Bot";
 
-// Run when client connects
+// wordt gerunt wanner client is geconnect
 io.on("connection", (socket) => {
   socket.on("joinRoom", ({ username, room }) => {
     const user = userJoin(socket.id, username, room);
 
     socket.join(user.room);
 
-    // Welcome current user
+    // gebruiker verwelkomen
     socket.emit("message", formatMessage(botName, "Welcome to the chatroom!"));
 
-    // Broadcast when a user connects
+    // broadcast
     socket.broadcast
       .to(user.room)
       .emit(
@@ -57,21 +57,18 @@ io.on("connection", (socket) => {
         formatMessage(botName, `${user.username} has joined the chat`)
       );
 
-    // Send users and room info
     io.to(user.room).emit("roomUsers", {
       room: user.room,
       users: getRoomUsers(user.room),
     });
   });
 
-  // Listen for chatMessage
   socket.on("chatMessage", (msg) => {
     const user = getCurrentUser(socket.id);
 
     io.to(user.room).emit("message", formatMessage(user.username, msg));
   });
 
-  // Runs when client disconnects
   socket.on("disconnect", () => {
     const user = userLeave(socket.id);
 
@@ -81,7 +78,6 @@ io.on("connection", (socket) => {
         formatMessage(botName, `${user.username} has left the chat`)
       );
 
-      // Send users and room info
       io.to(user.room).emit("roomUsers", {
         room: user.room,
         users: getRoomUsers(user.room),
@@ -115,12 +111,6 @@ async function handleApi(req, res) {
       res.render("index", {
         array: array,
       });
-
-      // for (let i = 0; i < array.length; i++) {
-      //   probe(array[i].image).then(data => {
-      //     console.log(data);
-      //   })
-      // }
     });
 }
 
