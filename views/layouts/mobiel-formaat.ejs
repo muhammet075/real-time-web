@@ -15,6 +15,7 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="manifest" href="/manifest.json" />
+    <script type="module" src="js/app.js"></script>
 
     <script
       src="https://kit.fontawesome.com/e367b28ca4.js"
@@ -40,27 +41,21 @@
       <div class="zoekbalk">
         <button id="zoekenSluiten" title="zoekSluiten">X</button>
         <h2>Search</h2>
-        <input id="zoekVeld" />
-        <button id="extraZoeken">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
+        <section>
+          <input id="zoekVeld" />
+          <button id="extraZoeken">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </section>
       </div>
-
-      <button id="resultatenResetten">
-        <i class="fa-solid fa-filter-circle-xmark"></i>
-      </button>
 
       <main>
         <div class="cryptoInfo"><%- body %></div>
+
+        </div>
       </main>
     </div>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
-      integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4="
-      crossorigin="anonymous"
-    ></script>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="js/main.js"></script>
+    
   </body>
 </html>

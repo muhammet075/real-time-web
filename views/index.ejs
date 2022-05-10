@@ -1,6 +1,27 @@
+<div class="head">
+<section>
+  <img src="img/crypto.svg" alt="2 ladies are watching to a coin"/>
+</section>
+<section>
+  <h1>Your CryptoAbi</h1>
+</section>
+<section>
+  <p>CryptoAbi helps you with all your crypto solutions. Check the current course and discuss with people about your favorite crypto coin. Join one of the chat rooms!</p>
+</section>
+<section>
+  <button>More about CryptoAbi</button>
+  <button class="coinButton">Coins</button>
+</section>
+</div>
+
 
 <div class="cryptocoins">
-  
+            <button id="resultatenResetten">
+            <i class="fa-solid fa-filter-circle-xmark"></i>
+          </button>
+                      <p class="emptyState">Nothing found...</p>
+
+
   <% for (let i = 0; i < array.length; i++) {%>
  <div class="cryptoContainer <%= array[i].name %>"
   <div class="cryptoGegevens <%= array[i].name %> tabindex="4">
@@ -27,8 +48,8 @@
     </ul>
 
 
-
   </div>
   </div>
   <%}%>
+
 </div>
