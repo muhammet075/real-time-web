@@ -20,7 +20,7 @@ Voor het project real-time-web heb ik 10 schetsen gemaakt om een app te ontwikke
 10. Realtime boter-kaas-en-eieren app
 <br/><br/>
 
-## 3 Concept wireflow
+## 3x Concept wireflows
 1. Crypto app met een realtime chatroom
 <img src="https://i.ibb.co/M7zw3S9/schetsapp1.png" alt="wireflow" width="500px">
 <br/>
@@ -30,3 +30,5 @@ Voor het project real-time-web heb ik 10 schetsen gemaakt om een app te ontwikke
 3. Realtime tekenen app
 <img src="https://i.ibb.co/tMXQy7r/schetsapp3.png" alt="wireflow" width="500px">
 <br/><br/>
+
+
