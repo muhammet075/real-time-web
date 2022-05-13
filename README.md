@@ -42,5 +42,50 @@ Voor dit project heb ik als external data source de opensource <a href="https://
 
 ### Real Time Events
 <img src="https://i.ibb.co/y4DZ11s/datacyclediagram1.png" alt="datacyclediagram" width="700px">
+<br/><br/>
 
 
+## Features List 🖇
+* Zoeken & Filteren
+* Crypto gegevens bekijken
+* Favoriet toevoegen*
+<br/>
+
+## Dependencies
+* NodeJS
+* Express
+* EJS
+* Express-EJS-Layouts
+* Socket.io
+* Node-Fetch
+* HTML, CSS & JS
+* <a href="https://fontawesome.com/">Font Awesome</a>
+* <a href="https://www.coingecko.com/en/api/documentation">Coingecko Crypto API</a>
+* <a href="https://storyset.com/">Storyset Illustrations</a>
+<br/>
+
+
+## Installeren
+1. Clone de repository<br/>
+```
+  git clone https://github.com/muhammet075/real-time-web
+```
+
+2. Navigeer naar het project<br/>
+```
+ cd real-time-web
+```
+
+3. Installeer NPM<br/>
+```
+  npm install
+```
+
+4. Start de app 🚀<br/>
+```
+  npm start
+```
+
+## Live Demo Heroku🚀
+<a href="https://realtimeweb-cmd.herokuapp.com/">https://realtimeweb-cmd.herokuapp.com/</a>
+<br/>
