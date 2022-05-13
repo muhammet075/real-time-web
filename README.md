@@ -1,9 +1,8 @@
 # CryptoAbi
 
 ## Description
-CryptoAbi voor het real-time-web project is een mobiele applicatie waarbij de gebruiker de huidige informatie van crypto coins kan inzien. Zoals de huidige prijs, market cap & laatste update. De gebruiker kan de chat rooms joinen en chatten met andere gebruikers. Per specifieke coin wordt er een chat room aangemaakt.
+CryptoAbi voor het real-time-web project is een mobiele applicatie waarbij de gebruiker de huidige informatie van crypto coins kan inzien. Zoals de huidige prijs, market cap & laatste update. De gebruiker kan de chat rooms joinen en chatten met andere gebruikers. Per specifieke coin wordt er een chat room aangemaakt. Bij de chatrooms is er geen limiet met een maximaal aantal users, Multi-user support.
 <br/><br/>
-
 
 ## Live Demo Heroku 🚀
 <a href="https://realtimeweb-cmd.herokuapp.com/">https://realtimeweb-cmd.herokuapp.com/</a>
@@ -56,7 +55,11 @@ Voor het project real-time-web heb ik 10 schetsen gemaakt om een app te ontwikke
 
 ## Data sets
 <img src="https://static.coingecko.com/s/coingecko-logo-63f24b60e1d2d526c141fee733ad2a39fbce7dabedd187a0dba95220396ce9a0.png" alt="coingecko" width="200px">
-Voor dit project heb ik als external data source de opensource <a href="https://www.coingecko.com/en/api">Coingecko API</a> gebruikt. De data die ik meekrijg per specifieke coin zijn bijvoorbeeld de prijzen, symbolen, iconen, updates etc. Die worden op de homepagina weergegeven. Voor de chatrooms met socket.io wordt ook data gebruikt.<br/><br/>
+Voor dit project heb ik als external data source de opensource <a href="https://www.coingecko.com/en/api">Coingecko API</a> gebruikt. De data die ik meekrijg per specifieke coin zijn bijvoorbeeld de prijzen, symbolen, iconen, updates etc. Die worden op de homepagina weergegeven. Voor de chatrooms met socket.io wordt ook data gebruikt.
+<br/><br/>
+De Data van de coins wordt geloopt in de index pagina. Daar ziet de gebruiker aparte container blokken van elke specifieke coin en de gebruiker kan daar informatie over de coin lezen. Vervolgens stop ik alle data in de localstorage en de localstorage data haal ik op in de chatrooms pagina. Daar loop ik weer door alle data heen die in de localstorage zitten en vandaar maak ik aparte formulieren van om de chatrooms te joinen. Hierdoor zijn er meerdere chatrooms. Per chatroom zijn kunnen er users joinen zonder een limiet.
+
+<br/><br/>
 <img src="https://i.ibb.co/yq2D1mp/datamodel.png" alt="datamodel" width="500px">
 <br/><br/>
 
@@ -68,8 +71,7 @@ De Client doet eerst een get request voor de url / (dus naar de home pagina gaan
 
 ### Real Time Events
 <img src="https://i.ibb.co/y4DZ11s/datacyclediagram1.png" alt="datacyclediagram" width="700px">
-Hierboven in de diagram voor de chatrooms met socket.io, zie je hoe de data wordt verstuurd van de server naar de client. Je ziet ook welke data modellen er worden gebruikt.
-
+Hierboven in de diagram voor de chatrooms met socket.io, zie je hoe de data wordt verstuurd van de server naar de client. Je ziet ook welke data modellen er worden gebruikt. 
 <br/><br/>
 
 
@@ -78,7 +80,7 @@ Hierboven in de diagram voor de chatrooms met socket.io, zie je hoe de data word
 * Crypto gegevens bekijken
 * Chatrooms joinen
 * Chatten
-<br/>
+<br/><br/>
 
 ## Dependencies
 * NodeJS
