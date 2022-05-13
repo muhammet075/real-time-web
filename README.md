@@ -31,6 +31,27 @@ Voor het project real-time-web heb ik 10 schetsen gemaakt om een app te ontwikke
 <img src="https://i.ibb.co/tMXQy7r/schetsapp3.png" alt="wireflow" width="500px">
 <br/><br/>
 
+## MoSCoW tabel
+### Must have
+* Chatroom ✅
+* Data renderen van uit de API ✅
+
+### Should have
+* Meerdere chatrooms maken ✅  
+* Data uit de API designen ✅
+* Prive chatrooms
+
+### Could have
+* Tekstballonnen in de chatroom van links naar rechts laten gaan
+* Aantal online gebruikers laten zien die in de chatrooms zijn
+
+### Would like to have
+* Realtime crypto grafieken
+* 
+<br/><br/>
+
+<br/><br/>
+
 ## Data sets
 Voor dit project heb ik als external data source de opensource <a href="https://www.coingecko.com/en/api">Coingecko API</a> gebruikt. De data die ik meekrijg per specifieke coin zijn bijvoorbeeld de prijzen, symbolen, iconen, updates etc. Die worden op de homepagina weergegeven. Voor de chatrooms met socket.io wordt ook data gebruikt.<br/>
 <img src="https://i.ibb.co/yq2D1mp/datamodel.png" alt="datamodel" width="500px">
