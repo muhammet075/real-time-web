@@ -32,7 +32,7 @@ Voor het project real-time-web heb ik 10 schetsen gemaakt om een app te ontwikke
 <br/><br/>
 
 ## Data sets
-Voor dit project heb ik als external data source de opensource <a href="https://www.coingecko.com/en/api">Coingecko API</a> gebruikt. De data die ik meekrijg per specifieke coin zijn bijvoorbeeld de prijzen, symbolen, iconen, updates etc. Die worden op de homepagina weergegeven. Voor de chatrooms met socket.io wordt ook data gebruikt.
+Voor dit project heb ik als external data source de opensource <a href="https://www.coingecko.com/en/api">Coingecko API</a> gebruikt. De data die ik meekrijg per specifieke coin zijn bijvoorbeeld de prijzen, symbolen, iconen, updates etc. Die worden op de homepagina weergegeven. Voor de chatrooms met socket.io wordt ook data gebruikt.<br/>
 <img src="https://i.ibb.co/yq2D1mp/datamodel.png" alt="datamodel" width="500px">
 <br/><br/>
 
