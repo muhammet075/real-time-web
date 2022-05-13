@@ -19,3 +19,9 @@ Voor het project real-time-web heb ik 10 schetsen gemaakt om een app te ontwikke
 9. Nieuws app met realtime paginas
 10. Realtime boter-kaas-en-eieren app
 <br/><br/>
+
+## 3 Concept wireflow
+
+<img src="https://i.ibb.co/M7zw3S9/schetsapp1.png" alt="wireflow" width="500px">
+<img src="https://i.ibb.co/M7zw3S9/schetsapp2.png" alt="wireflow" width="500px">
+<img src="https://i.ibb.co/M7zw3S9/schetsapp3.png" alt="wireflow" width="500px">
