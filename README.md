@@ -55,6 +55,7 @@ Voor het project real-time-web heb ik 10 schetsen gemaakt om een app te ontwikke
 <br/><br/>
 
 ## Data sets
+<img src="https://static.coingecko.com/s/coingecko-logo-63f24b60e1d2d526c141fee733ad2a39fbce7dabedd187a0dba95220396ce9a0.png" alt="coingecko" width="200px">
 Voor dit project heb ik als external data source de opensource <a href="https://www.coingecko.com/en/api">Coingecko API</a> gebruikt. De data die ik meekrijg per specifieke coin zijn bijvoorbeeld de prijzen, symbolen, iconen, updates etc. Die worden op de homepagina weergegeven. Voor de chatrooms met socket.io wordt ook data gebruikt.<br/><br/>
 <img src="https://i.ibb.co/yq2D1mp/datamodel.png" alt="datamodel" width="500px">
 <br/><br/>
