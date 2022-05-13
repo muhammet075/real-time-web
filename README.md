@@ -47,9 +47,6 @@ Voor het project real-time-web heb ik 10 schetsen gemaakt om een app te ontwikke
 
 ### Would like to have
 * Realtime crypto grafieken
-* 
-<br/><br/>
-
 <br/><br/>
 
 ## Data sets
