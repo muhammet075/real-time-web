@@ -64,6 +64,7 @@ Voor dit project heb ik als external data source de opensource <a href="https://
 <img src="https://i.ibb.co/S3LWrDM/datacyclediagram2.png" alt="datacyclediagram" width="500px">
 <br/>
 De Client doet eerst een get request voor de url / (dus naar de home pagina gaan). Vervolgens doet de server een api call bij de andere server waar de API zich bevindt. Vervolgens verstuurd de server de data van de API naar mijn NodeJS Server. Vervolgens verstuurt mijn NodeJS server de data naar de Client.
+<br/>
 
 ### Real Time Events
 <img src="https://i.ibb.co/y4DZ11s/datacyclediagram1.png" alt="datacyclediagram" width="700px">
