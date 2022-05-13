@@ -27,7 +27,7 @@ Voor het project real-time-web heb ik 10 schetsen gemaakt om een app te ontwikke
 
 ## 3x Concept wireflows
 1. Crypto app met een realtime chatroom
-<img src="https://i.ibb.co/M7zw3S9/schetsapp1.png" alt="wireflow" width="300px">
+<img src="https://i.ibb.co/M7zw3S9/schetsapp1.png" alt="wireflow" width="400px">
 <br/>
 2. Crypto app met realtime grafieken
 <img src="https://i.ibb.co/T1Qz3CP/schetsapp2.png" alt="wireflow" width="300px">
