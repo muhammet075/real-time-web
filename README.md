@@ -4,6 +4,11 @@
 CryptoAbi voor het real-time-web project is een mobiele applicatie waarbij de gebruiker de huidige informatie van crypto coins kan inzien. Zoals de huidige prijs, market cap & laatste update. De gebruiker kan de chat rooms joinen en chatten met andere gebruikers. Per specifieke coin wordt er een chat room aangemaakt.
 <br/><br/>
 
+
+## Live Demo Heroku 🚀
+<a href="https://realtimeweb-cmd.herokuapp.com/">https://realtimeweb-cmd.herokuapp.com/</a>
+<br/><br/>
+
 ## Concept schetsen
 Voor het project real-time-web heb ik 10 schetsen gemaakt om een app te ontwikkelen.
 <img src="https://i.ibb.co/mSc2kQ9/schetsen1.jpg" alt="schets" width="400px">
@@ -103,7 +108,3 @@ Voor dit project heb ik als external data source de opensource <a href="https://
 ```
   npm start
 ```
-
-## Live Demo Heroku🚀
-<a href="https://realtimeweb-cmd.herokuapp.com/">https://realtimeweb-cmd.herokuapp.com/</a>
-<br/>
