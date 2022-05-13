@@ -73,7 +73,7 @@ Hierboven in de diagram voor de chatrooms met socket.io, zie je hoe de data word
 <br/><br/>
 
 
-## Features List 🖇
+## Features List
 * Zoeken & Filteren
 * Crypto gegevens bekijken
 * Chatrooms joinen
@@ -110,7 +110,7 @@ Hierboven in de diagram voor de chatrooms met socket.io, zie je hoe de data word
   npm install
 ```
 
-4. Start de app 🚀<br/>
+4. Start de app<br/>
 ```
   npm start
 ```
