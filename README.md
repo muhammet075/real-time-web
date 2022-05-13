@@ -76,7 +76,8 @@ Hierboven in de diagram voor de chatrooms met socket.io, zie je hoe de data word
 ## Features List 🖇
 * Zoeken & Filteren
 * Crypto gegevens bekijken
-* Favoriet toevoegen*
+* Chatrooms joinen
+* Chatten
 <br/>
 
 ## Dependencies
